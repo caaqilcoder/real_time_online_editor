@@ -1,0 +1,41 @@
+<html>
+<head>
+    <title>Online Editor</title>
+    <script>
+        function qoraal() {
+            var qorid = document.getElementById('badal').value;
+            document.getElementById('arag').srcdoc = qorid;
+        }
+    </script>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        } 
+        .dhamaan {
+            background: #3ad1b0;
+            width: 100%;
+            height: 100%;
+            display: inline-flex;
+            padding: 5px;
+        } 
+        #badal {
+            width: 100%;
+            height: 100%;
+        }
+        #arag{
+            width: 100%;
+            height: 100%;
+            background: #dd6464;
+            border: 1px solid #563ad1;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="dhamaan">
+        <textarea id="badal" placeholder="Halkan ku qor code ka .." onkeyup="qoraal()"></textarea>
+        <iframe  id="arag"></iframe>
+    </div>
+</body>
+</html>
